@@ -320,7 +320,7 @@ void main()
                     flag = old_cal;
                     break;
                 case 6:
-                    cout << "\nReturning to Main Menu.";
+                    cout << "\nReturning to previous menu.";
                     cout << "Press any key to continue...";
                     getch();
                     break;
@@ -415,8 +415,138 @@ void main()
                     flag = old_cal;
                     break;
                 case 3:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nEnter the base number: ";
+                        cin >> num1;
+                    }
+                    else
+                    {
+                        num1 = temp;
+                        cout << "\nFirst number is: " << num1 << endl;
+                    }
+                    cout << "\nEnter second number for power to find power: ";
+                    cin >> num2;
+                    num3 = scien_calc::power(num1, num2);
+                    cout << "\n"
+                         << num1 << " raised to the power of " << num2 << " is: " << num3 << endl;
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    temp = num3;
+                    flag = old_cal;
+                    break;
+                case 4:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nEnter the number to find its Factorial: ";
+                        cin >> num1;
+                    }
+                    else
+                    {
+                        num1 = temp;
+                        cout << "\nNumber to find Factorial is: " << num1 << endl;
+                    }
+                    long int num4 = scien_calc::fact(num1);
+                    cout << "\nFactorial of " << num1 << " is: " << num4 << endl;
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    temp = num4;
+                    flag = old_cal;
+                    break;
+                case 5:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nEnter the Sin value: ";
+                        cin >> num1;
+                    }
+                    else
+                    {
+                        num1 = temp;
+                        cout << "\nSin value is: " << num1 << endl;
+                    }
+                    num3 = scien_calc::sin_func(num1);
+                    cout << "\nSin of " << num1 << " is: " << num3 << endl;
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    temp = num3;
+                    flag = old_cal;
+                    break;
+                case 6:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nEnter the Cos value: ";
+                        cin >> num1;
+                    }
+                    else
+                    {
+                        num1 = temp;
+                        cout << "\nCos value is: " << num1 << endl;
+                    }
+                    num3 = scien_calc::cos_func(num1);
+                    cout << "\nCos of " << num1 << " is: " << num3 << endl;
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    temp = num3;
+                    flag = old_cal;
+                    break;
+                case 7:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nEnter the Tan value: ";
+                        cin >> num1;
+                    }
+                    else
+                    {
+                        num1 = temp;
+                        cout << "\nTan value is: " << num1 << endl;
+                    }
+                    num3 = scien_calc::tan_func(num1);
+                    cout << "\nTan of " << num1 << " is: " << num3 << endl;
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    temp = num3;
+                    flag = old_cal;
+                    break;
+                case 8:
+                    cout << "\nReturning to previous menu.";
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    break;
+                case 9:
+                    cout << "\nQuitting the program.";
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    exit(0);
+                case 10:
+                    if (flag == new_cal)
+                    {
+                        cout << "\nInvalid choice.";
+                        cout << "\nPress any key to continue...";
+                        getch();
+                    }
+                    else
+                    {
+                        temp = 0;
+                        flag = new_cal;
+                    }
+                    break;
+                default:
+                    cout << "\nInvalid option. Please try again.";
+                    cout << "\nPress any key to continue...";
+                    getch();
+                    break;
                 }
-            }
+            } while (choice_2 != 8);
+            break;
+        case 3:
+            cout << "\nQuitting the program.";
+            cout << "\nPress any key to continue...";
+            getch();
+        default:
+            cout << "\nInvalid option. Please try again.";
+            cout << "\nPress any key to continue...";
+            getch();
+            break;
         }
-    }
+    } while (choice_1 != 3);
 }
