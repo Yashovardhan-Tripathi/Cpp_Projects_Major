@@ -11,7 +11,6 @@ Exception handling is not implemented in this project, so do not enter a string 
 // File including and preprocessor declaration
 
 #include <iostream>
-#include <conio.h>
 #include <math.h>
 #include <stdlib.h>
 
